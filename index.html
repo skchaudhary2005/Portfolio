@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Kumar - Inferno Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Embers Container -->
+    <div class="embers" id="embers"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 id="typing-name"></h1>
+                <p class="intro">AI & ML Enthusiast | Frontend Developer</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <!-- Replace with your actual photo URL -->
+                <img src="sumit.jpg" alt="Sumit Kumar">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about-section fade-in">
+        <h2>About Me</h2>
+        <p>I'm a 2nd-year B.Tech Computer Science Engineering student specializing in Artificial Intelligence. Passionate about building intelligent systems and crafting stunning web experiences.</p>
+        <p><strong>Education:</strong> B.Tech CSE (AI & ML) - Currently in 2nd Year</p>
+        <p><strong>Career Goal:</strong> Innovate in AI/ML and develop groundbreaking models for real-world impact.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills-section fade-in">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Python</h3>
+                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>C Programming</h3>
+                <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>AI/ML Basics</h3>
+                <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>Java</h3>
+                <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects-section fade-in">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Simple ML Classifier</h3>
+                <p>A Python-based machine learning model using scikit-learn to classify iris flowers with high accuracy.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn small">View Code</a>
+                    <a href="#" class="btn small">Live Demo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Responsive Portfolio</h3>
+                <p>This fiery interactive personal website built with pure HTML, CSS, and Vanilla JavaScript.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn small">View Code</a>
+                    <a href="#" class="btn small">Live Demo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>C Console Adventure Game</h3>
+                <p>A text-based adventure game developed in C with multiple story paths and user choices.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn small">View Code</a>
+                    <a href="#" class="btn small">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section fade-in">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://github.com/skchaudhary2005" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/sumit-chaudhary-41b306327/ target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sumit Kumar. Burning Bright with Passion 🔥</p>
+    </footer>
+
+    <script>
+        // Create Floating Fire Embers
+        document.addEventListener('DOMContentLoaded', () => {
+            const embersContainer = document.getElementById('embers');
+            const emberCount = 40; // Adjust for more/less embers
+
+            for (let i = 0; i < emberCount; i++) {
+                const ember = document.createElement('div');
+                ember.classList.add('ember');
+
+                // Random properties
+                const leftPos = Math.random() * 100; // % of viewport width
+                const size = 4 + Math.random() * 8; // px
+                const duration = 8 + Math.random() * 12; // seconds
+                const delay = Math.random() * 5; // seconds
+                const drift = (Math.random() - 0.5) * 200; // px horizontal drift
+
+                ember.style.left = `${leftPos}vw`;
+                ember.style.width = `${size}px`;
+                ember.style.height = `${size}px`;
+                ember.style.animationDuration = `${duration}s`;
+                ember.style.animationDelay = `${delay}s`;
+                ember.style.setProperty('--drift', `${drift}px`);
+
+                embersContainer.appendChild(ember);
+            }
+
+            // Typing Animation
+            const typingName = document.getElementById('typing-name');
+            const fullText = "Hi, I'm Sumit Kumar";
+            let i = 0;
+
+            function typeWriter() {
+                if (i < fullText.length) {
+                    typingName.textContent += fullText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    typingName.style.borderRight = 'none';
+                }
+            }
+
+            typeWriter();
+
+            // Fade-in on Scroll
+            const fadeElems = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            fadeElems.forEach(el => observer.observe(el));
+
+            // Form Validation
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !message) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                alert('Thank you! Your message has been sent successfully.');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
