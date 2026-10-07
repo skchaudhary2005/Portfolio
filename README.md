@@ -37,4 +37,9 @@ Portfolio content → Project information → Skills → Developer profile → C
 
 GitHub: [skchaudhary2005](https://github.com/skchaudhary2005)
 
+
+### 📬 Connect With Me
+- GitHub: [skchaudhary2005](https://github.com/skchaudhary2005)
+- LinkedIn: [Sumit Kumar](https://www.linkedin.com/in/sumit-chaudhary-41b306327/)
+
 ⭐ If you like the portfolio, consider starring the repository.
